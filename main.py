@@ -15,8 +15,9 @@ hashtags = TweetCatcher.getTweetHashtagsList(lastTweet)
 if TweetCatcher.isHashtagThere('waterPrint', hashtags) :
     # 5. retrieve text to print
     textToPrint = TweetCatcher.retrieveTextToPrint(tweetText)
-    #print(textToPrint)
     listToPrint = textToPrint.split()
     #print(*listToPrint, sep='\n')
-    
-    t2p.wordToBit('tata')
+    # 6. Print text 
+    for word in listToPrint :
+        image = t2p.wordToBitmap(word)
+        t2p.waterPrint(image) # if I surround with print() it will print 'None' at the end (indica redundancia)
