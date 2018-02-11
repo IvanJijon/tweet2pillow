@@ -1,4 +1,9 @@
 from Classes.TweetCatcher import TweetCatcher
+from Classes.Text2Pillow import Text2Pillow
+
+# Initialization
+
+t2p = Text2Pillow()
 
 # 1. Get Last tweet
 lastTweet = TweetCatcher.getHomeLastTweet()
@@ -10,6 +15,8 @@ hashtags = TweetCatcher.getTweetHashtagsList(lastTweet)
 if TweetCatcher.isHashtagThere('waterPrint', hashtags) :
     # 5. retrieve text to print
     textToPrint = TweetCatcher.retrieveTextToPrint(tweetText)
-    print(textToPrint)
+    #print(textToPrint)
     listToPrint = textToPrint.split()
-    print(*listToPrint, sep='\n')
+    #print(*listToPrint, sep='\n')
+    
+    t2p.wordToBit('tata')
