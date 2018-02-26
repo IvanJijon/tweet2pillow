@@ -27,7 +27,7 @@ class TweetCatcher:
 
     @classmethod
     def getHomeLastTweet(self):
-        tweet = self.api.GetHomeTimeline(count=1,include_entities=True)[0]
+        tweet = self.api.GetUserTimeline(count=1)[0]
         return tweet
 
     @classmethod
