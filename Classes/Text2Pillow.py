@@ -30,6 +30,6 @@ class Text2Pillow:
                 if image.getpixel((colnum, rownum)): 
                     line.append(' ')
                 else: 
-                    line.append('♡')
+                    line.append('#')
             # Print line by line
             print (''.join(line))
